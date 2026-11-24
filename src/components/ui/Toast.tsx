@@ -1,6 +1,6 @@
 "use client";
 
-import { useToast } from "./CartProvider";
+import { useToast } from "@/components/cart/CartProvider";
 import styles from "./Toast.module.css";
 
 export function Toast() {

@@ -1,4 +1,4 @@
-import { HeaderView } from "@/components/Header";
+import { HeaderView } from "@/components/layout/Header";
 import styles from "./status.module.css";
 
 export default function Loading() {

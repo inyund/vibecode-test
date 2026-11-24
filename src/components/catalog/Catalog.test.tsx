@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { screen } from "@testing-library/react";
-import { Catalog } from "@/components/Catalog";
+import { Catalog } from "@/components/catalog/Catalog";
 import { PRODUCTS } from "@/data/products";
 import { renderWithCart } from "@/test/render";
 

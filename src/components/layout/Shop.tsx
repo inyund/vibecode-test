@@ -1,11 +1,11 @@
 "use client";
 
 import type { Product } from "@/lib/types";
-import { CartProvider } from "./CartProvider";
-import { Header } from "./Header";
-import { Catalog } from "./Catalog";
-import { CartDrawer } from "./CartDrawer";
-import { Toast } from "./Toast";
+import { CartProvider } from "@/components/cart/CartProvider";
+import { Header } from "@/components/layout/Header";
+import { Catalog } from "@/components/catalog/Catalog";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { Toast } from "@/components/ui/Toast";
 
 export function Shop({ products }: { products: Product[] }) {
   return (

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { screen, within } from "@testing-library/react";
-import { Catalog } from "@/components/Catalog";
-import { Header } from "@/components/Header";
+import { Catalog } from "@/components/catalog/Catalog";
+import { Header } from "@/components/layout/Header";
 import { PRODUCTS } from "@/data/products";
 import { renderWithCart } from "@/test/render";
 
