@@ -1,0 +1,30 @@
+.region {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 1100;
+  transform: translateX(-50%);
+  max-width: calc(100% - 20px);
+  pointer-events: none;
+}
+.toast {
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: toast-in 0.2s ease;
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    animation: none;
+  }
+}

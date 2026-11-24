@@ -1,0 +1,182 @@
+/* Catches outside clicks only; fully transparent like the legacy page (no dimming). */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: transparent;
+  display: none;
+}
+.backdrop[data-open="true"] {
+  display: block;
+}
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+.drawer[data-open="true"] {
+  right: 0;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+}
+.close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+.empty {
+  text-align: center;
+  color: #999;
+  margin-top: 50px;
+}
+.items {
+  list-style: none;
+}
+.item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.thumb {
+  flex: none;
+  width: 60px;
+  height: 60px;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+}
+.details {
+  flex: 1;
+}
+.name {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.price {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+.qty {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.qty button {
+  background-color: #f0f0f0;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qty button:disabled {
+  cursor: not-allowed;
+  color: #999;
+}
+/* Typed quantity, styled like legacy .quantity-display */
+.qty input {
+  width: 40px;
+  margin: 0 10px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: inherit;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.qty input:focus {
+  outline: 1px solid #ddd;
+}
+.qty input::-webkit-inner-spin-button,
+.qty input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.remove {
+  background: none;
+  border: none;
+  color: #999;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px;
+}
+.remove:hover {
+  color: #ff6b6b;
+}
+.summary {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #ddd;
+}
+.error {
+  margin-bottom: 15px;
+  color: #ff6b6b;
+  font-size: 14px;
+  text-align: center;
+}
+.count {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.total {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+.checkout {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.checkout:disabled {
+  cursor: not-allowed;
+}
+
+/* Legacy 問題4: the 400px drawer overflowed phones. Full-width below 768px; desktop unchanged. */
+@media (max-width: 768px) {
+  .drawer {
+    width: 100%;
+    right: -100%;
+  }
+}
