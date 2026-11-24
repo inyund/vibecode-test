@@ -1,7 +1,7 @@
 "use client";
 
 import { formatBadgeCount } from "@/lib/cart";
-import { useCart } from "./CartProvider";
+import { useCart } from "@/components/cart/CartProvider";
 import styles from "./Header.module.css";
 
 export function Header() {

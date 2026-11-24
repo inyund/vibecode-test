@@ -3,7 +3,7 @@
 import { memo } from "react";
 import { formatPrice } from "@/lib/format";
 import type { Product } from "@/lib/types";
-import { useCartActions } from "./CartProvider";
+import { useCartActions } from "@/components/cart/CartProvider";
 import styles from "./ProductCard.module.css";
 
 export const ProductCard = memo(function ProductCard({ product }: { product: Product }) {

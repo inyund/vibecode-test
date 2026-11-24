@@ -2,7 +2,7 @@
 
 import type { Product } from "@/lib/types";
 import { useProductSearch } from "@/lib/search";
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "@/components/catalog/ProductCard";
 import styles from "./Catalog.module.css";
 
 export function Catalog({ products }: { products: Product[] }) {

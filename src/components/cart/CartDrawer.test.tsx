@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { fireEvent, screen, within } from "@testing-library/react";
-import { CartDrawer } from "@/components/CartDrawer";
-import { ConfirmDialog } from "@/components/ConfirmDialog";
-import { Header } from "@/components/Header";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { ConfirmDialog } from "@/components/ui/ConfirmDialog";
+import { Header } from "@/components/layout/Header";
 import { renderWithCart } from "@/test/render";
 
 vi.mock("@/app/actions", () => ({ checkout: vi.fn() }));

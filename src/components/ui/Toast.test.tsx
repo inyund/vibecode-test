@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { act, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { CartProvider, useCart } from "@/components/CartProvider";
-import { Toast } from "@/components/Toast";
+import { CartProvider, useCart } from "@/components/cart/CartProvider";
+import { Toast } from "@/components/ui/Toast";
 import { PRODUCTS } from "@/data/products";
 
 const [first, second] = PRODUCTS;

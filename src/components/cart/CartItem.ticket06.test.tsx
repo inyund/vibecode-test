@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
 import { fireEvent, screen, within } from "@testing-library/react";
-import { CartDrawer } from "@/components/CartDrawer";
-import { Catalog } from "@/components/Catalog";
-import { Header } from "@/components/Header";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { Catalog } from "@/components/catalog/Catalog";
+import { Header } from "@/components/layout/Header";
 import { PRODUCTS } from "@/data/products";
 import { renderWithCart } from "@/test/render";
 

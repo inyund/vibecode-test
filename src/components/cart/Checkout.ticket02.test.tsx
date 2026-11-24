@@ -1,10 +1,10 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { act, fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { checkout } from "@/app/actions";
-import { CartDrawer } from "@/components/CartDrawer";
-import { Catalog } from "@/components/Catalog";
-import { Header } from "@/components/Header";
-import { Toast } from "@/components/Toast";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { Catalog } from "@/components/catalog/Catalog";
+import { Header } from "@/components/layout/Header";
+import { Toast } from "@/components/ui/Toast";
 import { PRODUCTS } from "@/data/products";
 import type { CheckoutResult } from "@/lib/types";
 import { renderWithCart } from "@/test/render";

@@ -2,9 +2,9 @@ import { memo, Profiler } from "react";
 import { describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { renderWithCart } from "@/test/render";
-import { useCart, useCartActions, type CartActions } from "./CartProvider";
+import { useCart, useCartActions, type CartActions } from "@/components/cart/CartProvider";
 import { PRODUCTS } from "@/data/products";
-import { ProductCard } from "./ProductCard";
+import { ProductCard } from "@/components/catalog/ProductCard";
 
 vi.mock("@/app/actions", () => ({ checkout: vi.fn() }));
 

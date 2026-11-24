@@ -5,8 +5,8 @@ import { checkout } from "@/app/actions";
 import { MAX_QUANTITY } from "@/lib/cart";
 import { formatPrice } from "@/lib/format";
 import type { CartLine } from "@/lib/types";
-import { useCart } from "./CartProvider";
-import { ConfirmDialog } from "./ConfirmDialog";
+import { useCart } from "@/components/cart/CartProvider";
+import { ConfirmDialog } from "@/components/ui/ConfirmDialog";
 import styles from "./CartDrawer.module.css";
 
 // `trigger` is where focus returns when the dialog closes (if it still exists). Passed explicitly:
